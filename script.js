@@ -296,6 +296,10 @@ function tirarDado() {
   document.getElementById("carisma").value = Math.floor(Math.random() * 20) + 1;
 }
 
+function calcularModificador(valorEstadistica) {
+  return Math.floor((valorEstadistica - 10) / 2);
+}
+
 async function imprimir() {
   const clase = document.getElementById("clases").value;
   const raza = document.getElementById("raza").value;
@@ -306,37 +310,75 @@ async function imprimir() {
   const sabiduria = document.getElementById("sabiduria").value;
   const carisma = document.getElementById("carisma").value;
 
-  const pdfUrl = "assets/sheet/SheetDnD5.pdf";
+  const modificadorFuerza = calcularModificador(fuerza);
+  const modificadorDestreza = calcularModificador(destreza);
+  const modificadorConstitucion = calcularModificador(constitucion);
+  const modificadorInteligencia = calcularModificador(inteligencia);
+  const modificadorSabiduria = calcularModificador(sabiduria);
+  const modificadorCarisma = calcularModificador(carisma);
+
+  const alinieamiento = document.getElementById("alinieamiento").value;
+  const objetoInicial = document.getElementById("objeto").value;
+
+  const pdfUrl = "assets/ficha/SheetDnD5.pdf";
 
   const { PDFDocument } = PDFLib;
   const existingPdfBytes = await fetch(pdfUrl).then((res) => res.arrayBuffer());
   const pdfDoc = await PDFDocument.load(existingPdfBytes);
 
   const page = pdfDoc.getPages()[0];
+
   const fontSize = 12;
-  const coordenadasClase = { x: 50, y: 750 };
-  const coordenadasRaza = { x: 50, y: 695 };
+
+  //Stats sin modificador
+  const coordenadasClase = { x: 270, y: 735 };
+  const coordenadasRaza = { x: 270, y: 710 };
   const coordenadasFuerza = { x: 52, y: 595 };
   const coordenadasDestreza = { x: 52, y: 522 };
   const coordenadasConstitucion = { x: 50, y: 450 };
   const coordenadasInteligencia = { x: 50, y: 376 };
   const coordenadasSabiduria = { x: 50, y: 310 };
   const coordenadasCarisma = { x: 50, y: 234 };
+
+  //modificador de las stats
+
+  const coordenadaModificadorFuerza = { x: 55, y: 615 };
+  const coordenadaModificadorDestreza = { x: 55, y: 542 };
+  const coordenadaModificadorConstitucion = { x: 55, y: 473 };
+  const coordenadaModificadorInteligencia = { x: 55, y: 403 };
+  const coordenadaModificadorSabiduria = { x: 55, y: 327 };
+  const coordenadaModificadorCarisma = { x: 55, y: 254 };
+  const coordenadaAliniacion = { x: 390, y: 710 };
+  const coordenadaItems = { x: 270, y: 165 };
+
   page.setFontSize(fontSize);
 
-  page.drawText(`${clase}`, {
+  page.drawText(`${clase}, nivel 1`, {
     x: coordenadasClase.x,
     y: coordenadasClase.y,
   });
+
+  page.drawText(`${alinieamiento}`, {
+    x: coordenadaAliniacion.x,
+    y: coordenadaAliniacion.y,
+  });
+
+  page.drawText(`${objetoInicial}`, {
+    x: coordenadaItems.x,
+    y: coordenadaItems.y,
+  });
+
   page.drawText(`${raza}`, {
     x: coordenadasRaza.x,
     y: coordenadasRaza.y,
   });
+
   page.drawText(`${fuerza}`, {
     x: coordenadasFuerza.x,
     y: coordenadasFuerza.y,
     fontsize: fontSize,
   });
+
   page.drawText(`${destreza}`, {
     x: coordenadasDestreza.x,
     y: coordenadasDestreza.y,
@@ -367,6 +409,48 @@ async function imprimir() {
     fontsize: fontSize,
   });
 
+  page.drawText(`${modificadorFuerza}`, {
+    x: coordenadaModificadorFuerza.x,
+    y: coordenadaModificadorFuerza.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorDestreza}`, {
+    x: coordenadaModificadorDestreza.x,
+    y: coordenadaModificadorDestreza.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorConstitucion}`, {
+    x: coordenadaModificadorConstitucion.x,
+    y: coordenadaModificadorConstitucion.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorSabiduria}`, {
+    x: coordenadaModificadorSabiduria.x,
+    y: coordenadaModificadorSabiduria.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorInteligencia}`, {
+    x: coordenadaModificadorInteligencia.x,
+    y: coordenadaModificadorInteligencia.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorCarisma}`, {
+    x: coordenadaModificadorCarisma.x,
+    y: coordenadaModificadorCarisma.y,
+    fontSize: fontSize,
+  });
+
+  page.drawText(`${modificadorFuerza}`, {
+    x: coordenadaModificadorFuerza.x,
+    y: coordenadaModificadorFuerza.y,
+    fontSize: fontSize,
+  });
+
   const modifiedPdfBytes = await pdfDoc.save();
 
   const blob = new Blob([modifiedPdfBytes], { type: "application/pdf" });
@@ -374,8 +458,4 @@ async function imprimir() {
   link.href = window.URL.createObjectURL(blob);
   link.download = "ficha_jugador_modificada.pdf";
   link.click();
-}
-
-function calcularModificador(valorEstadistica) {
-  return (valorEstadistica - 10) / 2;
 }
