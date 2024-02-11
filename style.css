@@ -57,10 +57,9 @@ input[type=number]::-webkit-outer-spin-button {
 
 button {
     background-color: #534059;
-    padding: 7.5%;
-    
+    padding: 10%;
     font-family: "Pixelify Sans", sans-serif;
-    font-size: 2vh;
+    font-size: 1.5vh;
     border: hsl(42, 100%, 35%) groove 3px;
     color: white;
     border-radius: 10px;
