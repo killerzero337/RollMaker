@@ -349,7 +349,7 @@ form {
 }
 
 
-@media screen and (width <=850px) {
+@media screen and (width <=950px) {
     body {
         font-size: 1.5vh;
         min-height: 100vh;
