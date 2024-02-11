@@ -398,6 +398,7 @@ form {
 
     .stats {
         gap: 5vw;
+        padding: 5%;
     }
 
     footer {
