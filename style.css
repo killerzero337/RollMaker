@@ -402,7 +402,7 @@ form {
     }
 
     footer {
-        top: 5vh;
+        top: 7vh;
         font-size: 2vh;
     }
 
@@ -413,7 +413,4 @@ form {
     .imagenInfo {
         min-height: 30vh;
     }
-
-
-    
 }
