@@ -370,6 +370,7 @@ form {
     button {
         min-width: 15vw;
         padding: 3%;
+        font-size: 1.5vh;
     }
 
     .dado {
