@@ -58,7 +58,7 @@ input[type=number]::-webkit-outer-spin-button {
 button {
     background-color: #534059;
     padding: 7.5%;
-
+    
     font-family: "Pixelify Sans", sans-serif;
     font-size: 2vh;
     border: hsl(42, 100%, 35%) groove 3px;
@@ -397,7 +397,7 @@ form {
     }
 
     .stats {
-        gap: 8vw;
+        gap: 5vw;
     }
 
     footer {
@@ -414,21 +414,5 @@ form {
     }
 
 
-    .izquierda {
-        width: calc(10vw - 20px);
-        height: 100%;
-        
-    }
-
-    .derecha {
-        width: calc(10vw - 20px);
-        height: 100%;
-    }
-
-
-
-    .derecha::after {
-        width: calc(10vw - 20px);
-        height: 100%;
-    }
+    
 }
