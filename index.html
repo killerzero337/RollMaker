@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RollMaker</title>
+    <link rel="icon" type="image/x-icon" href="assets/dadoLogo.jpg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/LogoPixelArt.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.15.0/dist/pdf-lib.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="izquierda"></div>
+
+
+    <div class="caja">
+
+        <header>
+            <div class="logo">
+
+            </div>
+            <h1>RollMaker</h1>
+        </header>
+
+        <div class="contenido">
+
+            <form>
+
+                <div class="Formulario">
+                    <div class="campos">
+                        <div class="clase">
+                            <label for="clases">Elige una clase:</label>
+                            <select id="clases" name="clasesJug">
+                                <option value="" disabled selected>Elige tu clase</option>
+
+                            </select>
+                            <select id="hechizos" name="hechizos">
+
+                            </select>
+                        </div>
+
+                        <div class="raza">
+                            <label for="raza">Elige una Raza:</label>
+                            <select id="raza" name="razaJug">
+                                <option value="" disabled selected>Elige tu raza</option>
+
+                            </select>
+                            <select id="hechizosRaza" name="hechizosRaza">
+
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="consumibles">
+                        <div class="alinieamiento">
+                            <label for="alinieamiento">Elige un alinieamiento:</label>
+                            <select id="alinieamiento" name="alinieamientoJug">
+                                <option value="" disabled selected>Elige tu alinieamiento</option>
+
+                            </select>
+                            <label for="objeto">Elige un objeto:</label>
+                            <select id="objeto" name="objetoJug">
+                                <option value="" disabled selected>Elige tu objeto:</option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+                    <div class="stats">
+                        <div class="statinput">
+                            <label for="fuerza">Fue</label>
+                            <input type="number" name="fuerza" id="fuerza" min="0" max="20">
+                        </div>
+                        <div class="statinput">
+                            <label for="destreza">Des</label>
+                            <input type="number" name="destreza" id="destreza" min="0" max="20">
+                        </div>
+                        <div class="statinput">
+                            <label for="constitucion">Con</label>
+                            <input type="number" name="constitucion" id="constitucion" min="0" max="20">
+                        </div>
+                        <div class="statinput">
+                            <label for="inteligencia">Int</label>
+                            <input type="number" name="inteligencia" id="inteligencia" min="0" max="20">
+                        </div>
+                        <div class="statinput">
+                            <label for="sabiduria">Sab</label>
+                            <input type="number" name="sabiduria" id="sabiduria" min="0" max="20">
+                        </div>
+                        <div class="statinput">
+                            <label for="carisma">Car</label>
+                            <input type="number" name="carisma" id="carisma" min="0" max="20">
+                        </div>
+                    </div>
+
+                    <div class="botones">
+
+                        <button type="button" onclick="generarMonstruoAleatorio()">Generar monstruo</button>
+                        <button type="button" class="dado" onclick="tirarDado()"></button>
+                        <button type="button" onclick="imprimir()">Imprimir ficha</button>
+
+                    </div>
+
+                </div>
+            </form>
+            <hr>
+
+            <div class="informacionAdicional">
+
+                <div class="imagenInfo"></div>
+                <div class="infoTextoAdicional">
+                    <p>Bienvenido a nuestro generador de fichas</p>
+                    <p>esperemos tenga un gran roll! </p>
+                    <p style="color: red;">(prohibido lanzar bolas
+                        de fuego en la web)</p>
+                </div>
+
+                </dic:\Users\Michael\Desktop\Clases\DAW 2\Cliente\Proyectos\EjercicioTema7\generador\assets\404.pngv>
+            </div>
+        </div>
+
+        <div class="derecha"></div>
+        <footer>
+            Diseño por <a href="https://codingpotions.com">Coding Potions</a>, código por <a
+                href="https://github.com/killerzero337">killerzero337</a>
+        </footer>
+
+</body>
+
+</html>
