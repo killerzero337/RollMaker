@@ -278,6 +278,13 @@ form {
     gap: 0.5vh;
 }
 
+.informacionAdicional {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-content: center center;
+    text-align: center;
+}
+
 
 .imagenInfo {
     background-image: url(assets/logo_con_fondo.png);
@@ -292,20 +299,15 @@ form {
     margin-bottom: 4vh;
 }
 
-.informacionAdicional {
-    text-align: center;
-}
 
 .dado {
     border: hsla(257, 95%, 30%, 0.742) groove 5px;
     border-radius: 50%;
-    min-width: 8vw;
+    min-width: 7vw;
     background-position: center;
     background-image: url(assets/dice.png);
     background-size: contain;
     background-repeat: no-repeat;
-    aspect-ratio: 1;
-    color: white;
     filter: hue-rotate(45deg) contrast(1.2);
     image-rendering: pixelated;
 }
@@ -372,6 +374,12 @@ form {
         font-size: 1.5vh;
     }
 
+    .informacionAdicional {
+        display: grid;
+        grid-template-columns: 2fr;
+        text-align: center;
+    }
+
     .dado {
         width: 25vw;
         border-radius: 50%;
@@ -412,5 +420,6 @@ form {
 
     .imagenInfo {
         min-height: 30vh;
+       
     }
 }
