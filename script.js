@@ -171,9 +171,7 @@ function mostrarInfo(campoElegido) {
     switch (campoElegido) {
       case "dragonborn":
         imagenInfo.style.backgroundImage = 'url("assets/razas/dragon.webp")';
-        imagenInfo.style.backgroundPosition = "right";
         textoInfo.style.fontSize = "1vh";
-        imagenInfo.style.width = "28vw";
         textoInfo.innerHTML =
           "<p>Los dragonborn son guerreros con linaje de dragón, con escamas y rasgos draconianos.</p> <p>Pueden lanzar alientos de energía elemental.</p>";
         textoInfo.innerHTML +=
@@ -181,7 +179,6 @@ function mostrarInfo(campoElegido) {
         break;
       case "dwarf":
         imagenInfo.style.backgroundImage = 'url("assets/razas/Dwarf.webp")';
-        imagenInfo.style.width = "20vw";
         textoInfo.style.fontSize = "1.1vh";
         textoInfo.innerHTML =
           "<p>Los enanos son expertos artesanos y guerreros resistentes.</p> <p>Tienen una estatura baja, barbas largas y habilidades</p><p> sobresalientes en la metalurgia.</p>";
@@ -195,14 +192,12 @@ function mostrarInfo(campoElegido) {
         textoInfo.innerHTML +=
           "<p>Visten con ropas elegantes y a menudo se destacan</p> <p>como exploradores y defensores de los bosques.</p>";
         textoInfo.style.fontSize = "1.5vh";
-        imagenInfo.style.width = "30vw";
         break;
       default:
         imagenInfo.style.backgroundImage = 'url("assets/logo_con_fondo.png")';
         textoInfo.innerHTML =
           '<p>Bienvenido a nuestro generador de fichas</p> <p>esperemos tenga un gran roll! </p> <p style="color: red;">(prohibido lanzar bolas de fuego en la web)</p>';
         console.error("Me he salido.");
-        imagenInfo.style.width = "40vh";
         textoInfo.style.fontSize = "2vh";
         break;
     }
