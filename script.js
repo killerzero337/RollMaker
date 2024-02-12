@@ -134,7 +134,7 @@ function mostrarInfo(campoElegido) {
         imagenInfo.style.backgroundRepeat = "no-repeat";
         imagenInfo.style.backgroundPosition = "top";
         textoInfo.style.fontSize = "1vh";
-        imagenInfo.style.width = "15vw";
+        // imagenInfo.style.width = "15vw";
         textoInfo.innerHTML =
           " <p>Los clérigos son devotos guerreros sagrados que canalizan</p> <p>el poder divino para sanar heridas y castigar a los enemigos.</p>";
         textoInfo.innerHTML +=
