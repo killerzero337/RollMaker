@@ -57,7 +57,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 button {
     background-color: #534059;
-    padding: 1%;
+  
     font-family: "Pixelify Sans", sans-serif;
     font-size: 1.5vh;
     border: hsl(42, 100%, 35%) groove 3px;
@@ -284,15 +284,30 @@ form {
     place-content: center center;
     text-align: center;
 }
+.infoTextoAdicional {
+    width: 25vw;
+}
 
+.botonesMonstruo {
+    padding: 5%;
+    background-color: #534059;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: 1.5vh;
+    border: hsl(42, 100%, 35%) groove 3px;
+    color: white;
+    border-radius: 10px;
+    margin: 5%;
+    transition: 1s;
+}
 
 .imagenInfo {
     background-image: url(assets/logo_con_fondo.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     min-height: 40vh;
-    max-height: 40vh;
+    max-height: 50vh;
+    aspect-ratio: 1;
     width: 100%;
     border: groove 4px var(--bordeBotones);
     border-radius: 10px;
