@@ -274,11 +274,11 @@ function mostrarDatosMonstruo(monstruo) {
   contenidoCompletoWeb.appendChild(botonGenerarOtro);
 
   if (monstruo.image) {
-    caja.style.width = 100 + "vw";
+    imagenInfo.style.width = 100 + "vw";
     imagenInfo.style.backgroundImage = `url(https://www.dnd5eapi.co${monstruo.image})`;
   } else {
     imagenInfo.style.backgroundImage = `url(assets/404.png)`;
-    caja.style.width = 100 + "vw";
+    imagenInfo.style.width = 100 + "vw";
     imagenInfo.style.backgroundPosition = "center";
   }
 }
