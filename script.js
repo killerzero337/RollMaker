@@ -171,7 +171,7 @@ function mostrarInfo(campoElegido) {
     switch (campoElegido) {
       case "dragonborn":
         imagenInfo.style.backgroundImage = 'url("assets/razas/dragon.webp")';
-        textoInfo.style.fontSize = "1vh";
+        textoInfo.style.fontSize = "1.5vh";
         textoInfo.innerHTML =
           "<p>Los dragonborn son guerreros con linaje de dragón, con escamas y rasgos draconianos.</p> <p>Pueden lanzar alientos de energía elemental.</p>";
         textoInfo.innerHTML +=
@@ -179,7 +179,7 @@ function mostrarInfo(campoElegido) {
         break;
       case "dwarf":
         imagenInfo.style.backgroundImage = 'url("assets/razas/Dwarf.webp")';
-        textoInfo.style.fontSize = "1.1vh";
+        textoInfo.style.fontSize = "1.5vh";
         textoInfo.innerHTML =
           "<p>Los enanos son expertos artesanos y guerreros resistentes.</p> <p>Tienen una estatura baja, barbas largas y habilidades</p><p> sobresalientes en la metalurgia.</p>";
         textoInfo.innerHTML +=
@@ -262,18 +262,23 @@ function mostrarDatosMonstruo(monstruo) {
   }
 
   var botonGenerarOtro = document.createElement("button");
-  botonGenerarOtro.textContent = "Generar Otro Monstruo";
+  var botonVolverAlInicio = document.createElement("button");
+  botonGenerarOtro.textContent = "Generar otro Monstruo";
+  botonVolverAlInicio.textContent = "Volver al inicio" 
   botonGenerarOtro.addEventListener("click", generarMonstruoAleatorio);
+  botonVolverAlInicio.addEventListener("click", location.reload);
 
+  botonVolverAlInicio.className = "botonesMonstruo";
+  botonGenerarOtro.className = "botonesMonstruo";
   contenidoCompletoWeb.appendChild(detallesMonstruo);
   contenidoCompletoWeb.appendChild(botonGenerarOtro);
+  contenidoCompletoWeb.appendChild(botonVolverAlInicio);
 
   if (monstruo.image) {
-    imagenInfo.style.width = 100 + "vw";
     imagenInfo.style.backgroundImage = `url(https://www.dnd5eapi.co${monstruo.image})`;
   } else {
     imagenInfo.style.backgroundImage = `url(assets/404.png)`;
-    imagenInfo.style.width = 100 + "vw";
+
     imagenInfo.style.backgroundPosition = "center";
   }
 }
