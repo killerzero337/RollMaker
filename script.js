@@ -249,7 +249,7 @@ function mostrarDatosMonstruo(monstruo) {
   estadisticasMonstruo.innerHTML += `Constitucion: ${monstruo.constitution}, Inteligencia: ${monstruo.intelligence}<br>`;
   estadisticasMonstruo.innerHTML += `Sabiduria: ${monstruo.wisdom}, Carisma: ${monstruo.charisma}<br>`;
   var dadoDeDano = document.createElement("p");
-  dadoDeDano.textContent = "Dado de Daño: " + monstruo.hit_dice;
+  dadoDeDano.textContent = "HP(Puntos de golpe): " + monstruo.hit_dice;
 
   detallesMonstruo.appendChild(nombreMonstruo);
   detallesMonstruo.appendChild(tipoMonstruo);
