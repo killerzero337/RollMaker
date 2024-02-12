@@ -163,7 +163,11 @@ function mostrarInfo(campoElegido) {
 
         break;
       default:
+        imagenInfo.style.backgroundImage = 'url("assets/logo_con_fondo.png")';
+        textoInfo.innerHTML =
+          '<p>Bienvenido a nuestro generador de fichas</p> <p>esperemos tenga un gran roll! </p> <p style="color: red;">(prohibido lanzar bolas de fuego en la web)</p>';
         console.error("Me he salido.");
+        textoInfo.style.fontSize = "2vh";
         break;
     }
   } else if (campoElegido == "raza") {
@@ -264,7 +268,7 @@ function mostrarDatosMonstruo(monstruo) {
   var botonGenerarOtro = document.createElement("button");
   var botonVolverAlInicio = document.createElement("button");
   botonGenerarOtro.textContent = "Generar otro Monstruo";
-  botonVolverAlInicio.textContent = "Volver al inicio" 
+  botonVolverAlInicio.textContent = "Volver al inicio";
   botonGenerarOtro.addEventListener("click", generarMonstruoAleatorio);
   botonVolverAlInicio.addEventListener("click", location.reload);
 
