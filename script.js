@@ -133,7 +133,7 @@ function mostrarInfo(campoElegido) {
         imagenInfo.style.backgroundImage = 'url("assets/clases/clerigo.jpg")';
         imagenInfo.style.backgroundRepeat = "no-repeat";
         imagenInfo.style.backgroundPosition = "top";
-        textoInfo.style.fontSize = "1vh";
+        textoInfo.style.fontSize = "1.5vh";
         // imagenInfo.style.width = "15vw";
         textoInfo.innerHTML =
           " <p>Los clérigos son devotos guerreros sagrados que canalizan</p> <p>el poder divino para sanar heridas y castigar a los enemigos.</p>";
@@ -143,7 +143,7 @@ function mostrarInfo(campoElegido) {
       case "barbarian":
         imagenInfo.style.backgroundPosition = "center";
         imagenInfo.style.backgroundImage = 'url("assets/clases/barbaro.jpg")';
-        textoInfo.style.fontSize = "1vh";
+        textoInfo.style.fontSize = "1.5vh";
         // caja.style.width = 100 + "vw";
         textoInfo.innerHTML =
           "<p>Los bárbaros son guerreros salvajes y furiosos que desatan su ira en la batalla.</p>";
@@ -154,7 +154,7 @@ function mostrarInfo(campoElegido) {
       case "bard":
         imagenInfo.style.backgroundImage = 'url("assets/clases/bardo.webp")';
         imagenInfo.style.backgroundPosition = "center";
-        textoInfo.style.fontSize = "1vh";
+        textoInfo.style.fontSize = "1.5vh";
         // caja.style.width = 100 + "vw";
         textoInfo.innerHTML =
           "<p>Los bardos son artistas versátiles que combinan música, magia y habilidades sociales. Visten con atuendos elegantes y llevan instrumentos musicales.</p>";
