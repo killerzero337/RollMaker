@@ -400,7 +400,8 @@ form {
     }
 
     .infoTextoAdicional {
-        width: 45vw;
+        margin-top: -5%;
+        width: 50vw;
     }
 
     .dado {
