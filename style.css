@@ -387,6 +387,8 @@ form {
         width: 100%;
     }
 
+    
+
     button {
         min-width: 15vw;
         padding: 3%;
@@ -428,10 +430,12 @@ form {
     .caja {
         width: 80vw;
         height: 120vh;
+        justify-content: center;
+        align-content: center;
     }
 
     .stats {
-        gap: 5vw;
+        gap: 2vw;
         padding: 5%;
     }
 
@@ -475,11 +479,12 @@ form {
         height: 100%;
         z-index: 1;
         overflow: hidden;
+        image-rendering: pixelated;
     }
 
     .izquierda::before {
         content: "";
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         width: calc(15vw + 20px);
@@ -487,7 +492,6 @@ form {
         background-image: url(assets/plants2.png);
         background-repeat: repeat-y;
         background-size: cover;
-        background-position: top right;
         opacity: 1;
     }
 

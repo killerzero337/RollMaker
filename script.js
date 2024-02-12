@@ -167,7 +167,7 @@ function mostrarInfo(campoElegido) {
         textoInfo.innerHTML =
           '<p>Bienvenido a nuestro generador de fichas</p> <p>esperemos tenga un gran roll! </p> <p style="color: red;">(prohibido lanzar bolas de fuego en la web)</p>';
         console.error("Me he salido.");
-        textoInfo.style.fontSize = "2vh";
+        textoInfo.style.fontSize = "1.5vh";
         break;
     }
   } else if (campoElegido == "raza") {
@@ -200,7 +200,7 @@ function mostrarInfo(campoElegido) {
       default:
         imagenInfo.style.backgroundImage = 'url("assets/logo_con_fondo.png")';
         textoInfo.innerHTML =
-          '<p>Bienvenido a nuestro generador de fichas</p> <p>esperemos tenga un gran roll! </p> <p style="color: red;">(prohibido lanzar bolas de fuego en la web)</p>';
+          '<p>Bienvenido a nuestro generador de </p> <p>fichas esperemos tenga un gran roll! </p> <p style="color: red;">(prohibido lanzar bolas de fuego en la web)</p>';
         console.error("Me he salido.");
         textoInfo.style.fontSize = "2vh";
         break;
