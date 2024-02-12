@@ -57,7 +57,7 @@ input[type=number]::-webkit-outer-spin-button {
 
 button {
     background-color: #534059;
-  
+
     font-family: "Pixelify Sans", sans-serif;
     font-size: 1.5vh;
     border: hsl(42, 100%, 35%) groove 3px;
@@ -284,8 +284,9 @@ form {
     place-content: center center;
     text-align: center;
 }
+
 .infoTextoAdicional {
-    width: 25vw;
+    width: 30vw;
 }
 
 .botonesMonstruo {
@@ -394,8 +395,12 @@ form {
 
     .informacionAdicional {
         display: grid;
-        grid-template-columns: 2fr;
+        grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .infoTextoAdicional {
+        width: 45vw;
     }
 
     .dado {
@@ -428,7 +433,7 @@ form {
     }
 
     footer {
-        top: 7vh;
+        top: 6vh;
         font-size: 2vh;
     }
 
@@ -437,7 +442,84 @@ form {
     }
 
     .imagenInfo {
-        min-height: 30vh;
+        margin-top: 5%;
+        background-size: cover;
+        background-position: center;
+        min-height: 25vh;
 
+    }
+
+    .izquierda {
+        background-image: url(assets/plants2.png);
+        background-repeat: space;
+        position: fixed;
+        background-size: contain;
+        transform: scaleX(-1);
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: calc(10vw + 20px);
+        height: 100%;
+        image-rendering: pixelated;
+    }
+
+    .derecha {
+        position: fixed;
+        background-size: contain;
+        top: 0;
+        right: 0;
+        width: calc(10vw + 20px);
+        height: 100%;
+        z-index: 1;
+        overflow: hidden;
+    }
+
+    .izquierda::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(15vw + 20px);
+        height: 100%;
+        background-image: url(assets/plants2.png);
+        background-repeat: repeat-y;
+        background-size: cover;
+        background-position: top right;
+        opacity: 1;
+    }
+
+    .izquierda::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%);
+    }
+
+    .derecha::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(10vw + 20px);
+        height: 100%;
+        background-image: url(assets/plants2.png);
+        background-repeat: repeat-y;
+        background-size: contain;
+        background-position: top right;
+        opacity: 1;
+    }
+
+
+    .derecha::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: calc(10vw + 20px);
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 100%);
     }
 }
