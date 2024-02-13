@@ -52,6 +52,11 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
     text-align: center;
+}
+
+input[type=number] {
+
+    -moz-appearance: textfield;
 
 }
 
@@ -286,7 +291,7 @@ form {
 }
 
 .infoTextoAdicional {
-    width: 30vw;
+    width: 20vw;
 }
 
 .botonesMonstruo {
@@ -308,7 +313,6 @@ form {
     background-position: center;
     min-height: 40vh;
     max-height: 50vh;
-    aspect-ratio: 1;
     width: 100%;
     border: groove 4px var(--bordeBotones);
     border-radius: 10px;
@@ -387,7 +391,7 @@ form {
         width: 100%;
     }
 
-    
+
 
     button {
         min-width: 15vw;
