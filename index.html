@@ -13,7 +13,21 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>    
+<body>
+     <script>
+		// Si está soportado serviceWorker por el navegador
+		if ('serviceWorker' in navigator) {
+		  window.addEventListener('load', () => {
+			navigator.serviceWorker
+			  .register('service-worker.js')
+			  .then(reg => console.log('[Service Worker] * Registrado.'))
+			  .catch(err => console.log(`[Service Worker] * Error: ${err}`));
+		  });
+		}
+	  </script> 
+	
+	   <script src="service-worker.js"></script> 
+      
     <div class="izquierda"></div>
 
 
