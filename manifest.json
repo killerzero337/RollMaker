@@ -1,0 +1,32 @@
+{
+    "theme_color": "#534059",
+    "background_color": "#534059",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "RollMaker",
+    "short_name": "RollMaker",
+    "description": "Generador fichas",
+    "icons": [
+        {
+            "src": "manifest/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "manifest/icon-256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "manifest/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "manifest/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

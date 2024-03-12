@@ -4,7 +4,7 @@
     --cabecera-Titulos: #58180D;
     --texto-comun: black;
     --color-caja: hsl(267, 21%, 10%);
-    --color-borde: hsl(286, 16%, 30%);
+    --color-borde: rgb(83, 64, 89);
     --color-fondo-web: hsl(0, 0%, 10%);
     --bordeBotones: hsl(42, 100%, 35%);
 }
